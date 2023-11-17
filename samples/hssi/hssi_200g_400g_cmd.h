@@ -142,7 +142,7 @@ class hssi_200g_400g_cmd : public hssi_cmd {
       std::cout << "Setting start/end ROM address" << std::endl;
       uint32_t reg;
       reg = 0;
-      reg |= tg_200n_400 ? (0x0191 << 16) : (0x02FF << 16);
+      reg |= tg_200n_400 ? (0x011A << 16) : (0x0215 << 16);
       hafu->mbox_write(CSR_HW_TEST_ROM_ADDR, reg);
 
       uint32_t num_packets_per_rom_loop = 32;
